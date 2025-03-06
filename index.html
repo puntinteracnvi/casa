@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustrated Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="language-selector">
+        <label for="language">Trieu un idioma:</label>
+        <select id="language" onchange="changeAllTranslations(this.value)">
+            <option value="English">Anglès</option>
+            <option value="Spanish">Espanyol</option>
+            <option value="German">Alemany</option>
+            <option value="French">Francès</option>
+            <option value="Arabic">Àrab</option>
+        </select>
+    </div>
+    
+    <div class="dictionary-container">
+        <div class="coordinates">
+            <div class="top-numbers"></div>
+            <div class="main-content">
+                <div class="side-numbers"></div>
+                <div class="image-wrapper">
+                    <img src="bg.svg" alt="Illustration" class="background">
+                    <div class="grid-overlay"></div> <!-- Grid Overlay -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="cursor-position">0%, 0%</div>
+
+    <!-- Audio Elements -->
+    <audio id="audio-apple" src="apple.mp3"></audio>
+    <audio id="audio-tree" src="tree.mp3"></audio>
+    <audio id="audio-sun" src="sun.mp3"></audio>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
